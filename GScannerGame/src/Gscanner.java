@@ -25,13 +25,7 @@ public class Gscanner {
                 System.out.println("\nConfused, you stand there and the alligator eats you.");
             }
 
-        } 
-        
-        
-        
-        
-        
-        else if (choice1 == 2) {
+        }  else if (choice1 == 2) {
             System.out.println("\nYou walk to the right passage.");
             System.out.println("You see a faint light in the distance but a ladder next to you. Do you head toward the light (1) climb up the ladder (2)?");
             System.out.print("Enter 1 or 2: ");

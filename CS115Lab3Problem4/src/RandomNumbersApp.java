@@ -13,7 +13,8 @@ public class RandomNumbersApp {
 
 		// your code goes (method calls and assignments) here [2 pts]
 
-		singleSixSidedDieRoll = singleSixSidedDollRoll();
+//		singleSixSidedDieRoll = singleSixSidedDollRoll();
+		singleSixSidedDieRoll = (int) (Math.random() * (3 - 1) + 1);
 		singleTwelveSidedDieRoll = singleTwelveSidedDieRoll();
 		randomInt = ranodmInt(lowerBound, upperBound);
 		randomDouble = randomDouble(lowerBound, upperBound);
@@ -30,11 +31,12 @@ public class RandomNumbersApp {
 
 	// your methods go here
 	// sixSidedDieRoll method [0.5 pt]
-	private static int singleSixSidedDollRoll() {
-		// TODO Auto-generated method stub
-		Random rand = new Random();
-		return rand.nextInt(6) + 1;
-	}
+	
+//	private static int singleSixSidedDollRoll() {
+//		// TODO Auto-generated method stub
+//		Random rand = new Random();
+//		return rand.nextInt(6) + 1;
+//	}
 
 	// twelveSidedDieRoll [0.5 pt]
 	private static int singleTwelveSidedDieRoll() {
