@@ -55,9 +55,15 @@ class ScreenElement{
    return 0;
  }
  
- //boolean collide(float t, float b, float l, float r){
+ boolean collide(float t, float b, float l, float r){
+   //return r >= left && l <= right && b >= top && t <= bottom;
    
- //}
+   return 
+   r >= left() && 
+   l <= right() && 
+   b >= top && 
+   t < bottom();
+ }
  
  
  
