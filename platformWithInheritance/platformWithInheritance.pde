@@ -30,6 +30,10 @@ void draw() {
   if(theSwitch.inSwitch(thePlayer.xPos, thePlayer.yPos)){
     theStar.hidden = false;
   }
+  
+  if(theStar.inStar(thePlayer.xPos, thePlayer.yPos)){
+    
+  }
 
   for (Platform p : platforms) {
     p.display();
