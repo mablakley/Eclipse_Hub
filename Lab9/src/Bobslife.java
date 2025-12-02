@@ -21,7 +21,7 @@ public class Bobslife {
 
 	}
 
-	public String verifyLocation(String bobsLo) {
+	private String verifyLocation(String bobsLo) {
 		if (bobsLo.equals("home") || bobsLo.equals("work") || bobsLo.equals("gym")) {
 			return bobsLo;
 		} else
@@ -33,7 +33,7 @@ public class Bobslife {
 		if(inJail || isDead) {
 			return;
 		}
-		newLocation = bobsLo;
+		 bobsLo = verifyLocation(newLocation);
 	}
 
 	public void nextTime() {
@@ -69,7 +69,7 @@ public class Bobslife {
 
 	}
 
-	public String toString() {
+	 public String toString() {
 		String str = "Time: ";
 
 		str += time;
