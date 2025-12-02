@@ -43,13 +43,29 @@ class Demon extends ScreenElement {
   }
 
   void render() {
-    
+    translate(xPos, yPos);
     rectMode(CENTER);
     strokeWeight(2);
     stroke(255);
     fill(#ff0022);
     ellipse(0, 0, 30, 30);
   }
+  
+   float top() {
+    return 0;
+  }
 
+  float bottom() {
+    return 0;
+  }
 
+  float left() {
+    return 0;
+  }
+
+  float right() {
+    return 0;
+  }
+
+  
 }

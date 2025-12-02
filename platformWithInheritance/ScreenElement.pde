@@ -18,7 +18,7 @@ class ScreenElement {
     xVelo = 0;
     yVelo = 0;
     gravity = 0;
-    hidden = true;
+    hidden = false;
   }
 
   void display() {

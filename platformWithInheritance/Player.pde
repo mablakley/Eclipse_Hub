@@ -65,7 +65,7 @@ class Player {
     }
 
     for (Demon d : demons) {
-      if (d.inDemon(top, bottom, left, right)) {
+      if (d.collide(top, bottom, left, right)) {
         if (yVelo > 4) {
           if (xPos > d.xPos) {
             d.xVelo -= 8;
