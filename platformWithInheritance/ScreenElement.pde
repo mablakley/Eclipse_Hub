@@ -1,6 +1,8 @@
 class ScreenElement {
   float xPos;
   float yPos;
+  float xPrev;
+  float yPrev;
   float xVelo;
   float yVelo;
   float gravity;
@@ -33,6 +35,8 @@ class ScreenElement {
   }
 
   void update() {
+    xPrev = xPos;
+    yPrev = yPos;
     xPos += xVelo;
     yPos += yVelo;
     yVelo += gravity;
