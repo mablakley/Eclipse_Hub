@@ -14,6 +14,9 @@ class Demon extends ScreenElement {
   void update() {
     boolean onTop = false;
     super.update();
+    if(yVelo > 8){
+      yVelo = 8;
+    }
 
     for (Platform p : platforms) {
       if (p.inPlatform(top, bottom, left, right)) {
@@ -52,19 +55,19 @@ class Demon extends ScreenElement {
   }
   
    float top() {
-    return 0;
+    return yPos - 15;
   }
 
   float bottom() {
-    return 0;
+    return yPos + 15;
   }
 
   float left() {
-    return 0;
+    return xPos - 15;
   }
 
   float right() {
-    return 0;
+    return xPos + 15;
   }
 
   
