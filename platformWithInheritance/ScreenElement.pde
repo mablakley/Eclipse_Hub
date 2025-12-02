@@ -20,7 +20,13 @@ class ScreenElement{
  }
  
  void display(){
-   
+   if (hidden) {
+      return;
+    }
+   push();
+   translate(xPos,yPos);
+   render();
+   pop();
  }
  
  void render(){
@@ -28,7 +34,9 @@ class ScreenElement{
  }
  
  void update(){
-   
+   xPos += xVelo;
+   yPos += yVelo;
+   yVelo += gravity;
  }
  
  float top(){
@@ -47,9 +55,22 @@ class ScreenElement{
    return 0;
  }
  
- boolean collide(float t, float b, float l, float r){
+ //boolean collide(float t, float b, float l, float r){
    
- }
+ //}
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
  
