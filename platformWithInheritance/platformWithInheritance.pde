@@ -27,6 +27,9 @@ void draw() {
   theSwitch.display();
   thePlayer.update();
   thePlayer.display();
+  if(theSwitch.inSwitch(thePlayer.xPos, thePlayer.yPos)){
+    theStar.hidden = false;
+  }
 
   for (Platform p : platforms) {
     p.display();

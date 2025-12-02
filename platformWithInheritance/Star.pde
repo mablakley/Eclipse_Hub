@@ -1,27 +1,21 @@
-class Star {
-  float xPos;
-  float yPos;
-  boolean hidden;
+class Star extends ScreenElement{
 
   Star(float x, float y) {
+    super();
     xPos = x;
     yPos = y;
     hidden = true;
   }
 
-  void display() {
-    if (hidden) {
-      return;
-    }
-    push();
-    translate(xPos, yPos);
+  void render() {
+    
+    
     rectMode(CENTER);
     rotate(PI/4);
     strokeWeight(1);
     stroke(255);
     fill(#00ffff);
     rect(0, 0, 40, 40);
-    pop();
   }
 
   boolean inStar(float x, float y) {

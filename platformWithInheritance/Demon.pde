@@ -46,7 +46,7 @@ class Demon extends ScreenElement {
   }
 
   void render() {
-    translate(xPos, yPos);
+  
     rectMode(CENTER);
     strokeWeight(2);
     stroke(255);
