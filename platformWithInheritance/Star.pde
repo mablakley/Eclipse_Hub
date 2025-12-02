@@ -1,0 +1,35 @@
+class Star {
+  float xPos;
+  float yPos;
+  boolean hidden;
+
+  Star(float x, float y) {
+    xPos = x;
+    yPos = y;
+    hidden = true;
+  }
+
+  void display() {
+    if (hidden) {
+      return;
+    }
+    push();
+    translate(xPos, yPos);
+    rectMode(CENTER);
+    rotate(PI/4);
+    strokeWeight(1);
+    stroke(255);
+    fill(#00ffff);
+    rect(0, 0, 40, 40);
+    pop();
+  }
+
+  boolean inStar(float x, float y) {
+    if (dist(xPos, yPos, x, y) < 40 && !hidden) {
+      hidden = true;
+      return true;
+    } else {
+      return false;
+    }
+  }
+}
