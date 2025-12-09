@@ -1,25 +1,20 @@
-class Player {
-  float xPos;
-  float yPos;
-  float xVelo;
-  float yVelo;
+class Player extends ScreenElement{
   float health;
-  float gravity;  //declaration
-  float top;
-  float bottom;
-  float left;
-  float right;
   float xAcc;
+  int lives;
 
   Player(float x, float y) {
+    super();
     this.xPos = x;
     this.yPos = y;
     xVelo = 0;
     yVelo = 0;
     xAcc = 0;
+    lives = 3;
     health = 1;
     gravity = 0.8; //added gravity
   }
+  
 
   void update() {
     float xPrev = xPos;
@@ -82,17 +77,24 @@ class Player {
         }
       }
     }
+    if (yPos > height) {
+      respawn();
+      lives--;
+    }
   }
 
-  void display() {
-    push();
-    translate(xPos, yPos);
+  void render() {
+   
     rectMode(CENTER);
     strokeWeight(2);
     stroke(255);
     fill(#123460);
     rect(0, 0, 60, 60, 4);
-    pop();
+    fill(#ff0000);
+    for (int i = 0; i < lives; i++){
+      ellipse (i * 12 - 25,-45,10,10);
+    }
+    
   }
 
   void keyPressed() {

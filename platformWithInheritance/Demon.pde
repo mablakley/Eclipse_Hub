@@ -72,7 +72,7 @@ class Demon extends ScreenElement {
     return xPos + 15;
   }
 
-  void handleCollisions() {
+  void handleCollisions() { //overrides definition base class with stuff
     boolean onTop = false;
 
     for (Platform p : platforms) {

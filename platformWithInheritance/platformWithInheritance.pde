@@ -22,6 +22,10 @@ void setup() {
 }
 
 void draw() { 
+  if(thePlayer.lives <= 0){
+    background(#ff0000);
+    return;
+  }
   background(#111111);
   theStar.display();
   theSwitch.display();

@@ -30,6 +30,11 @@ class ScreenElement {
     render();
     pop();
   }
+  
+  void respawn(){
+    xPos = 0;
+    yPos = 0;
+  }
 
   void render() {
   }
