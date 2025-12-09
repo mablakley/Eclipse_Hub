@@ -40,6 +40,7 @@ class ScreenElement {
     xPos += xVelo;
     yPos += yVelo;
     yVelo += gravity;
+    handleCollisions();
   }
 
   float top() {
@@ -68,6 +69,16 @@ class ScreenElement {
       t < bottom();
   }
 
-  void handleCollisions() {
+  void handleCollisions() {  //stub fuction: base class version nothin here
+    
   }
+  
+  
+  
+  
+  
+  
+  
+  
+  
 }

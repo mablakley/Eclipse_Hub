@@ -11,10 +11,12 @@ class Demon extends ScreenElement {
     yVelo = 0;
   }
 
-  void update() {
+
+  void update() { //augmentation example, calls super functio
     boolean onTop = false;
     super.update();
-    if(yVelo > 8){
+
+    if (yVelo > 8) {
       yVelo = 8;
     }
 
@@ -22,7 +24,7 @@ class Demon extends ScreenElement {
       if (p.inPlatform(top, bottom, left, right)) {
         if (p.onTop(top, bottom, left, right)) {
           yPos = p.top() - 16;
-          
+
           onTop = true;
         } else if (yVelo >= 0) {
           xPos = xPrev;
@@ -46,15 +48,15 @@ class Demon extends ScreenElement {
   }
 
   void render() {
-  
+
     rectMode(CENTER);
     strokeWeight(2);
     stroke(255);
     fill(#ff0022);
     ellipse(0, 0, 30, 30);
   }
-  
-   float top() {
+
+  float top() {
     return yPos - 15;
   }
 
@@ -70,5 +72,24 @@ class Demon extends ScreenElement {
     return xPos + 15;
   }
 
-  
+  void handleCollisions() {
+    boolean onTop = false;
+
+    for (Platform p : platforms) {
+      if (p.inPlatform(top(), bottom(), left(), right())) {
+        if (p.onTop(top(), bottom(), left(), right())) {
+          yPos = p.top() - 16;
+          onTop = true;
+        } else if (yVelo >= 0) {
+          xPos = xPrev;
+          yPos = yPrev;
+          xVelo = -xVelo;
+        } else {
+          xPos = xPrev;
+          yPos = yPrev;
+          yVelo = 0;
+        }
+      }
+    }
+  }
 }
