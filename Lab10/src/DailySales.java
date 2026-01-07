@@ -41,10 +41,30 @@ public class DailySales {
 		return max;
 
 	}
+	
 
 	public int[] daysBelowGoal() {
-		return null;
+        int count = 0;
 
-	}
+        
+        for (int i = 0; i < daysInMonth; i++) {
+            if (sales[i] < 100) {
+                count++;
+            }
+        }
 
+       
+        int[] result = new int[count];
+        int idx = 0;
+
+        for (int i = 0; i < daysInMonth; i++) {
+            if (sales[i] < 100) {
+                result[idx++] = i + 1;
+            }
+        }
+
+        return result;
+    }
 }
+
+
