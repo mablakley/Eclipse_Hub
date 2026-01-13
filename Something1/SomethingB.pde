@@ -1,22 +1,19 @@
-class Something {
-  //variables
+class SomethingB{
   float xPos;
   float yPos;
   float xVelo;
   float yVelo;
-
-  Something() {
-    //initializations from setup()
-    xPos = 0;
-    yPos = 300;
-    xVelo = 14;
-    yVelo = 0;
-  }
-
-  void display() {
-    //draw()
+  
+  SomethingB(){
+    xPos = 400;
+    yPos = 40;
+    xVelo = 0;
+    yVelo = 14;
     
-  //3. update of variables
+  }
+  
+  void display(){
+    //3. update of variables
   xPos += xVelo;
   yPos += yVelo;
   //teleport from right to left
@@ -31,9 +28,11 @@ class Something {
   //4. using our variables
   translate(xPos, yPos);
   //put your shape here
-  fill(#382C1E);
-  rectMode(CENTER);
-  rect(0, 0, 90, 90, 25);
+  fill(#F3A505);
+  ellipse(0, 0, 60, 60);
   pop();
+    
   }
+  
+  
 }
