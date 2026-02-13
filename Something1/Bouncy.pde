@@ -1,14 +1,14 @@
-class SomethingD{
+class Bouncy{
   float xPos;
   float yPos;
   float xVelo;
   float yVelo;
   
-  SomethingD(){
-    xPos = 400;
-    yPos = 300;
-    xVelo = 0;
-    yVelo = 0;
+  Bouncy(){
+    xPos = 0;
+    yPos = 90;
+    xVelo = random(-4,4);
+    yVelo = random(-2,2);
     
   }
   
@@ -29,12 +29,8 @@ class SomethingD{
   //4. using our variables
   translate(xPos, yPos);
   //put your shape here
-  fill(#9D9101);
-  rectMode(CENTER);
-  rect(-10, 10, 20, 20);
-  rect(10, 10, 20, 20);
-  rect(10, -10, 20, 20);
-  rect(-10, -10, 20, 20);
+  fill(#686C5E);
+  ellipse(0, 0, 120, 120);
   pop();
     
   }

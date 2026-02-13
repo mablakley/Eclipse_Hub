@@ -1,14 +1,16 @@
-class SomethingC{
+class Static{
   float xPos;
   float yPos;
   float xVelo;
   float yVelo;
+  int c;
   
-  SomethingC(){
-    xPos = 0;
-    yPos = 50;
-    xVelo = 10;
-    yVelo = 10;
+  Static(int c){
+    xPos = 400;
+    yPos = 300;
+    xVelo = 0;
+    yVelo = 0;
+    this.c = c;
     
   }
   
@@ -29,8 +31,12 @@ class SomethingC{
   //4. using our variables
   translate(xPos, yPos);
   //put your shape here
-  fill(#686C5E);
-  ellipse(0, 0, 120, 120);
+  fill(c);
+  rectMode(CENTER);
+  rect(-10, 10, 20, 20);
+  rect(10, 10, 20, 20);
+  rect(10, -10, 20, 20);
+  rect(-10, -10, 20, 20);
   pop();
     
   }

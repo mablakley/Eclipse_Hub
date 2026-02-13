@@ -4,13 +4,15 @@ class Something {
   float yPos;
   float xVelo;
   float yVelo;
+  int c;
 
-  Something() {
+  Something(int c) {
     //initializations from setup()
     xPos = 0;
     yPos = 300;
     xVelo = 14;
     yVelo = 0;
+    this.c=c;
   }
 
   void display() {
